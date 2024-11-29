@@ -1,0 +1,580 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	filename: "the_beginning"
+	group: "0A06D7DBACB796BD"
+	icon: "create:andesite_alloy"
+	id: "09B85AC784913D9B"
+	order_index: 0
+	quest_links: [ ]
+	quests: [
+		{
+			description: ["Obtain 1 andesite alloy."]
+			disable_toast: true
+			id: "47C98FB174A9729F"
+			rewards: [{
+				id: "11D82841325DFE7A"
+				type: "xp"
+				xp: 20
+			}]
+			size: 3.0d
+			tasks: [{
+				id: "5EFB64387A735D8F"
+				item: "create:andesite_alloy"
+				type: "item"
+			}]
+			title: "The beginning"
+			x: 0.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["47C98FB174A9729F"]
+			description: ["Obtain 32 shafts."]
+			disable_toast: true
+			id: "608F56E318A533B0"
+			rewards: [{
+				id: "2036C222F30D8CF5"
+				type: "xp"
+				xp: 30
+			}]
+			tasks: [{
+				count: 32L
+				id: "76722AE387F1D844"
+				item: { Count: 32, id: "create:shaft" }
+				type: "item"
+			}]
+			title: "Peaceful transfer of power"
+			x: 1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["47C98FB174A9729F"]
+			description: ["Obtain a andesite casing."]
+			disable_toast: true
+			id: "08A99300594BCD7C"
+			rewards: [{
+				id: "67CC07D9ECA82B69"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "7076638B3CE5474E"
+				item: "create:andesite_casing"
+				type: "item"
+			}]
+			title: "Encased wood"
+			x: -1.0d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"08A99300594BCD7C"
+				"144AD7A270180CAC"
+			]
+			description: ["Craft a mechanical press."]
+			disable_toast: true
+			id: "251787C840D4FD6F"
+			tasks: [{
+				id: "49D16295675F6CC5"
+				item: "create:mechanical_press"
+				type: "item"
+			}]
+			title: "I'm pressed to come up with names"
+			x: -1.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["608F56E318A533B0"]
+			description: ["Craft a water wheel."]
+			disable_toast: true
+			id: "144AD7A270180CAC"
+			rewards: [{
+				id: "1418F19A233B5CF0"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "3ADA4A214095332B"
+				item: "create:water_wheel"
+				type: "item"
+			}]
+			title: "Power"
+			x: 1.0d
+			y: -2.5d
+		}
+		{
+			dependencies: ["251787C840D4FD6F"]
+			description: ["Press 5 iron ingots"]
+			disable_toast: true
+			id: "1DD6CF2D41E763FE"
+			rewards: [{
+				id: "026F1152045A4635"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				count: 5L
+				id: "15875AD45ED05EDB"
+				item: "create:iron_sheet"
+				type: "item"
+			}]
+			title: "Aw sheet"
+			x: 0.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["47C98FB174A9729F"]
+			description: ["Go to the nether."]
+			disable_toast: true
+			id: "4A057BF7B7A6D3D8"
+			tasks: [{
+				dimension: "minecraft:the_nether"
+				disable_toast: true
+				icon: "minecraft:crying_obsidian"
+				id: "79ACA8CDE55CB57C"
+				title: "What the hell?"
+				type: "dimension"
+			}]
+			x: -3.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["251787C840D4FD6F"]
+			description: ["Craft a basin."]
+			disable_toast: true
+			id: "453105E53257E1B6"
+			rewards: [{
+				id: "2FD05F902ADBE9E9"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "070284144CAC9E2E"
+				item: "create:basin"
+				type: "item"
+			}]
+			title: "Why not just use a cauldron?"
+			x: -2.0d
+			y: -4.0d
+		}
+		{
+			dependencies: ["4A057BF7B7A6D3D8"]
+			description: ["Craft a blaze burner."]
+			disable_toast: true
+			id: "2EE2F7E6D754A99B"
+			rewards: [{
+				id: "3215A11E3CAB1878"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "5B3EA1C1D8059EBE"
+				item: "create:empty_blaze_burner"
+				type: "item"
+			}]
+			title: "Prision"
+			x: -3.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["2EE2F7E6D754A99B"]
+			description: ["Trap a blaze."]
+			disable_toast: true
+			id: "1C587C2ABF826D54"
+			rewards: [{
+				id: "702E8333B9612D16"
+				type: "xp"
+				xp: 50
+			}]
+			tasks: [{
+				id: "4CC84CFDB4FB541D"
+				item: "create:blaze_burner"
+				type: "item"
+			}]
+			title: "Kidnapping"
+			x: -3.5d
+			y: -5.0d
+		}
+		{
+			dependencies: [
+				"1DD6CF2D41E763FE"
+				"1C587C2ABF826D54"
+				"453105E53257E1B6"
+			]
+			description: ["Craft a mixer."]
+			disable_toast: true
+			id: "6DE90819952BCF8D"
+			rewards: [{
+				id: "256C35E86AEB50A2"
+				type: "xp"
+				xp: 100
+			}]
+			size: 2.0d
+			tasks: [{
+				id: "24FD930E8A1249BB"
+				item: "create:mechanical_mixer"
+				type: "item"
+			}]
+			title: "I have mixed emotions"
+			x: -2.0d
+			y: -6.5d
+		}
+		{
+			dependencies: ["47C98FB174A9729F"]
+			disable_toast: true
+			id: "67CEE08D2AC4E327"
+			optional: true
+			tasks: [{
+				id: "41397ED82DD7401F"
+				item: "create:mechanical_drill"
+				type: "item"
+			}]
+			title: "Don't say it."
+			x: -2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["47C98FB174A9729F"]
+			description: ["Craft the basic copycat blocks."]
+			disable_toast: true
+			id: "46A891DDE86418DF"
+			optional: true
+			rewards: [{
+				id: "20644F6F73F405DE"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [
+				{
+					id: "2E90ADCF364A62C1"
+					item: "copycats:copycat_block"
+					type: "item"
+				}
+				{
+					id: "0CAC141AE26D0134"
+					item: "copycats:copycat_slab"
+					type: "item"
+				}
+				{
+					id: "29477513ADC89200"
+					item: "copycats:copycat_fence"
+					type: "item"
+				}
+				{
+					id: "6C58E290111AFCF4"
+					item: "copycats:copycat_wall"
+					type: "item"
+				}
+			]
+			title: "Flattery"
+			x: -3.0d
+			y: 1.5d
+		}
+		{
+			dependencies: ["1C587C2ABF826D54"]
+			description: ["Craft a blaze cake."]
+			disable_toast: true
+			id: "1DE0E27D40646A9D"
+			rewards: [{
+				id: "25C8A7D7E6ED2FC9"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "455267030C9E1055"
+				item: "create:blaze_cake"
+				type: "item"
+			}]
+			title: "Chocolate lava cake"
+			x: -4.5d
+			y: -6.0d
+		}
+		{
+			dependencies: ["608F56E318A533B0"]
+			description: ["Craft large and small cogs."]
+			disable_toast: true
+			id: "542E81A9B4C199D9"
+			rewards: [{
+				id: "7EFAB142CB7EC3F6"
+				type: "xp"
+				xp: 10
+			}]
+			tasks: [
+				{
+					id: "6DC04A06BE950603"
+					item: "create:cogwheel"
+					type: "item"
+				}
+				{
+					id: "543DC786D0CF52E8"
+					item: "create:large_cogwheel"
+					type: "item"
+				}
+			]
+			title: "Who needs a rotational speed contoller?"
+			x: 2.5d
+			y: -2.0d
+		}
+		{
+			dependency_requirement: "one_completed"
+			description: ["Spent all this effort making quests and you're cheating smh."]
+			id: "389410AFD62B43CC"
+			invisible: true
+			invisible_until_tasks: 1
+			optional: true
+			tasks: [
+				{
+					id: "13F6C84CDF1AF8F0"
+					item: "create:handheld_worldshaper"
+					type: "item"
+				}
+				{
+					id: "6ADDCFEEB102A6DB"
+					item: "create:creative_motor"
+					type: "item"
+				}
+				{
+					id: "7D6BE640F6DEC14E"
+					item: "create:creative_fluid_tank"
+					type: "item"
+				}
+				{
+					id: "5DE89C188AB89698"
+					item: "create:creative_crate"
+					type: "item"
+				}
+				{
+					id: "36AAB9B6D359EC56"
+					item: "create:creative_blaze_cake"
+					type: "item"
+				}
+				{
+					id: "5EBE50332852C1F6"
+					item: "numismatics:creative_vendor"
+					type: "item"
+				}
+				{
+					id: "079DAFDE40BD1F7F"
+					item: "tfmg:creative_generator"
+					type: "item"
+				}
+				{
+					id: "1CACCCD5F8355079"
+					item: "create_connected:creative_fluid_vessel"
+					type: "item"
+				}
+			]
+			title: "Cheater cheater pumpkin eater"
+			x: 0.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["4A057BF7B7A6D3D8"]
+			dependency_requirement: "one_started"
+			hide_dependency_lines: true
+			id: "182CD671AC3BFF58"
+			invisible: true
+			optional: true
+			rewards: [{
+				id: "04FE59862C9E6584"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				advancement: "minecraft:end/kill_dragon"
+				criterion: ""
+				id: "598DD30DBC31F64F"
+				optional_task: true
+				title: "How dare you hit a women"
+				type: "advancement"
+			}]
+			x: -4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["47C98FB174A9729F"]
+			description: ["Craft a vendor."]
+			disable_toast: true
+			id: "75B94354F6678278"
+			optional: true
+			rewards: [{
+				id: "1DF9B340EBFF3621"
+				item: "numismatics:cog"
+				type: "item"
+			}]
+			tasks: [{
+				id: "3DC69188334E9CCC"
+				item: "numismatics:vendor"
+				type: "item"
+			}]
+			title: "Stonks"
+			x: 2.5d
+			y: 0.0d
+		}
+		{
+			dependencies: ["75B94354F6678278"]
+			description: ["Craft a bank terminal."]
+			disable_toast: true
+			id: "459F354FF58D5DEB"
+			optional: true
+			rewards: [{
+				id: "678F8F82BD551751"
+				item: "numismatics:cog"
+				type: "item"
+			}]
+			tasks: [{
+				id: "4A894519F2A7FDA6"
+				item: "numismatics:bank_terminal"
+				type: "item"
+			}]
+			title: "No interest :("
+			x: 4.0d
+			y: -1.0d
+		}
+		{
+			dependencies: ["459F354FF58D5DEB"]
+			description: ["Carf a red card."]
+			disable_toast: true
+			id: "21270115EB73E13B"
+			optional: true
+			rewards: [{
+				id: "33B0D09CF188DFC6"
+				item: "numismatics:cog"
+				type: "item"
+			}]
+			tasks: [{
+				id: "0F846E086D8ECCEC"
+				item: "numismatics:red_card"
+				type: "item"
+			}]
+			title: "Credit card"
+			x: 5.5d
+			y: -2.0d
+		}
+		{
+			dependencies: ["21270115EB73E13B"]
+			description: ["Craft a banking guide."]
+			disable_toast: true
+			id: "241947975B879E8E"
+			optional: true
+			rewards: [{
+				id: "4912DA035D53770E"
+				item: "numismatics:cog"
+				type: "item"
+			}]
+			tasks: [{
+				id: "70189D86C9EBE521"
+				item: "numismatics:banking_guide"
+				type: "item"
+			}]
+			title: "Banking for dummies"
+			x: 7.0d
+			y: -3.0d
+		}
+		{
+			can_repeat: true
+			dependencies: ["241947975B879E8E"]
+			description: ["Trade netherite for a cog."]
+			disable_toast: true
+			id: "14A0952F2A9EB577"
+			optional: true
+			rewards: [{
+				id: "49062A1FB610346C"
+				item: "numismatics:cog"
+				type: "item"
+			}]
+			tasks: [{
+				id: "1F399BFD872C6467"
+				item: "minecraft:netherite_ingot"
+				type: "item"
+			}]
+			title: "Netherite trade"
+			x: 8.5d
+			y: -4.0d
+		}
+		{
+			dependencies: ["4A057BF7B7A6D3D8"]
+			description: ["Oh i though you said loaded chunk. Craft a chunk loader."]
+			disable_toast: true
+			id: "704F656C8D06E487"
+			optional: true
+			rewards: [{
+				id: "347D29F04BC79F82"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "7C27A82C805ECEC4"
+				item: "createchunkloading:chunk_loader"
+				type: "item"
+			}]
+			title: "Did you put to much nbt?"
+			x: -5.0d
+			y: -4.0d
+		}
+		{
+			dependencies: [
+				"75F7FF53038AC3A6"
+				"332E86E8C36EA732"
+			]
+			description: ["Craft a biplane."]
+			disable_toast: true
+			id: "7C6A04B8FE66D1D7"
+			optional: true
+			rewards: [{
+				id: "75D45AABAD105A65"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "11D20C3BD7912056"
+				item: "immersive_aircraft:biplane"
+				type: "item"
+			}]
+			title: "D.B. Cooper?"
+			x: 4.5d
+			y: 1.5d
+		}
+		{
+			dependencies: ["47C98FB174A9729F"]
+			description: ["Craft a engine."]
+			disable_toast: true
+			id: "75F7FF53038AC3A6"
+			optional: true
+			rewards: [{
+				id: "2B875EA1BD9905C1"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "25ABF7340D64AD07"
+				item: "immersive_aircraft:engine"
+				type: "item"
+			}]
+			title: "Stronk"
+			x: 3.0d
+			y: 1.0d
+		}
+		{
+			dependencies: ["47C98FB174A9729F"]
+			description: ["Craft a boiler."]
+			disable_toast: true
+			id: "332E86E8C36EA732"
+			optional: true
+			rewards: [{
+				id: "0546E4C17E6963CD"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "2C0B1609BC98AAC3"
+				item: "immersive_aircraft:boiler"
+				type: "item"
+			}]
+			title: "I'm in hot water trying to make these names"
+			x: 3.0d
+			y: 2.0d
+		}
+	]
+	title: "Andesite age"
+}

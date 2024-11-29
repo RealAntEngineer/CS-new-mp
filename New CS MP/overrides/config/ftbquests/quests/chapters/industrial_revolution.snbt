@@ -1,0 +1,674 @@
+{
+	default_hide_dependency_lines: false
+	default_quest_shape: ""
+	disable_toast: true
+	filename: "industrial_revolution"
+	group: "0A06D7DBACB796BD"
+	icon: "tfmg:steel_ingot"
+	id: "021E9FEA79803C72"
+	order_index: 2
+	quest_links: [ ]
+	quests: [
+		{
+			dependencies: [
+				"12C1A810620E9CFC"
+				"3B6039A2E4CCC79A"
+			]
+			description: ["Make a coal coke oven and get your first coal coke."]
+			disable_toast: true
+			id: "42F415BDA5835D3A"
+			rewards: [{
+				id: "255E396B1905A175"
+				type: "xp"
+				xp: 100
+			}]
+			size: 3.0d
+			tasks: [{
+				id: "0DC50388A6BDC6EB"
+				item: "tfmg:coal_coke"
+				type: "item"
+			}]
+			title: "COKE! Oh wait."
+			x: 0.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["42F415BDA5835D3A"]
+			description: ["Crush your coke rocks into fine powder."]
+			disable_toast: true
+			id: "32333E4CD349E87D"
+			rewards: [{
+				id: "0BA0A421405E9726"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "2F8706774BD07150"
+				item: "tfmg:coal_coke_dust"
+				type: "item"
+			}]
+			title: "Coke"
+			x: 0.0d
+			y: -3.0d
+		}
+		{
+			dependencies: ["42F415BDA5835D3A"]
+			description: ["Ayooo. Use a spout to put creosote on planks."]
+			disable_toast: true
+			id: "68698BE80C88B7DF"
+			rewards: [{
+				id: "605DB7B164C7B4A1"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "0B1B29D7943EFE22"
+				item: "tfmg:hardened_planks"
+				type: "item"
+			}]
+			title: "Hard wood"
+			x: -2.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["32333E4CD349E87D"]
+			description: ["Use a mixer to craft blasting mixture."]
+			disable_toast: true
+			id: "04A0B1C684B69B1E"
+			rewards: [{
+				id: "502668A00CA27995"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "55EEC456C5842372"
+				item: "tfmg:blasting_mixture"
+				type: "item"
+			}]
+			title: "Sus"
+			x: 0.0d
+			y: -4.5d
+		}
+		{
+			dependencies: ["04A0B1C684B69B1E"]
+			description: ["Use fireclay to craft fireclay bricks the basic component of a blast furnace."]
+			disable_toast: true
+			id: "2ED91A2E42910852"
+			rewards: [{
+				id: "1AF0B8F8E8D2BB6D"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "441E79CA1A2703F5"
+				item: "tfmg:fireproof_brick"
+				type: "item"
+			}]
+			title: "Truth teller"
+			x: 0.0d
+			y: -6.0d
+		}
+		{
+			dependencies: ["2ED91A2E42910852"]
+			description: ["Use a blast furnace to make your first steel ingot (ponder a blast furnace output.)"]
+			disable_toast: true
+			id: "5D8185C407A1CBB1"
+			rewards: [{
+				id: "44487A6CBB596FEA"
+				type: "xp"
+				xp: 50
+			}]
+			size: 3.0d
+			tasks: [{
+				id: "4801672B43E76969"
+				item: "tfmg:steel_ingot"
+				type: "item"
+			}]
+			title: "Stop thief!"
+			x: 0.0d
+			y: -9.0d
+		}
+		{
+			dependencies: [
+				"5D8185C407A1CBB1"
+				"68698BE80C88B7DF"
+			]
+			description: ["Oh i thought you said stolen case not steel casing apply a steel ingot onto a hardened planks."]
+			disable_toast: true
+			id: "5BC9B98C2AAF49B9"
+			rewards: [{
+				id: "3FFBC37241EFBA95"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "3363F2A2F141E004"
+				item: "tfmg:steel_casing"
+				type: "item"
+			}]
+			title: "Stolen case!"
+			x: -2.0d
+			y: -7.0d
+		}
+		{
+			dependencies: ["5D8185C407A1CBB1"]
+			description: ["Craft a screw driver."]
+			disable_toast: true
+			id: "48FF51262F51FBC2"
+			rewards: [{
+				id: "01D5DA770A3BDC6D"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "60946F494645CFAA"
+				item: {
+					Count: 1
+					id: "tfmg:screwdriver"
+					tag: {
+						Damage: 0
+					}
+				}
+				type: "item"
+			}]
+			title: "My uber was late screw you driver"
+			x: -3.5d
+			y: -10.5d
+		}
+		{
+			dependencies: ["5D8185C407A1CBB1"]
+			description: ["Craft screws"]
+			disable_toast: true
+			id: "203DE4CD13A29A17"
+			tasks: [{
+				id: "168955AF540C7334"
+				item: "tfmg:screw"
+				type: "item"
+			}]
+			title: "Don't do it"
+			x: -3.5d
+			y: -7.5d
+		}
+		{
+			dependencies: [
+				"48FF51262F51FBC2"
+				"203DE4CD13A29A17"
+				"7CCCAF8BFEE8E289"
+			]
+			description: ["Craft a steel mechanism."]
+			disable_toast: true
+			id: "1FAD89B45BF81243"
+			rewards: [{
+				id: "7E58229666F76C02"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "4335C9FA88CA74A4"
+				item: "tfmg:steel_mechanism"
+				type: "item"
+			}]
+			title: "Stolen mech- okay I'll stop"
+			x: -6.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["5D8185C407A1CBB1"]
+			description: ["Press steel into plates."]
+			disable_toast: true
+			id: "7CCCAF8BFEE8E289"
+			rewards: [{
+				id: "12962B181CC74639"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "26B091852C134227"
+				item: "tfmg:heavy_plate"
+				type: "item"
+			}]
+			title: "Just like yo momma"
+			x: -3.5d
+			y: -9.0d
+		}
+		{
+			dependencies: [
+				"1FAD89B45BF81243"
+				"2E4BECC28A5FEEC5"
+				"34973A9A743A96FA"
+			]
+			description: ["Craft a surface scanner."]
+			disable_toast: true
+			id: "630E111C421C7655"
+			rewards: [{
+				id: "4916275071F0A3FE"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "0354AB31D0DB14A8"
+				item: "tfmg:surface_scanner"
+				type: "item"
+			}]
+			title: "Just use your eyes"
+			x: -8.0d
+			y: -9.0d
+		}
+		{
+			dependencies: [
+				"7CCCAF8BFEE8E289"
+				"5BC9B98C2AAF49B9"
+			]
+			description: ["Apply a heavy plate onto a steel casing."]
+			disable_toast: true
+			id: "2E4BECC28A5FEEC5"
+			rewards: [{
+				id: "585F9A7E34450880"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "444ACDB0A5061105"
+				item: "tfmg:heavy_machinery_casing"
+				type: "item"
+			}]
+			title: "Your mom's clothes?"
+			x: -5.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["630E111C421C7655"]
+			description: ["Craft a machine input."]
+			disable_toast: true
+			id: "0C0AFCDFD7690396"
+			rewards: [{
+				id: "76ED6373E7DC7936"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "41161FDBA22DDD4F"
+				item: "tfmg:machine_input"
+				type: "item"
+			}]
+			title: "You put the things in the mechine"
+			x: -10.5d
+			y: -10.0d
+		}
+		{
+			dependencies: ["630E111C421C7655"]
+			description: ["Craft a pumpjack crank."]
+			disable_toast: true
+			id: "200D67DCAC1E144F"
+			rewards: [{
+				id: "493417DAF361C125"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "672AD8DEAE9944EB"
+				item: "tfmg:pumpjack_crank"
+				type: "item"
+			}]
+			title: "My brain is making some sus jokes"
+			x: -10.5d
+			y: -8.5d
+		}
+		{
+			dependencies: ["630E111C421C7655"]
+			description: ["Craft a jumpjack base."]
+			disable_toast: true
+			id: "642F1417332263A6"
+			rewards: [{
+				id: "4B382158D85E568F"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "4A3484BF464BF51D"
+				item: "tfmg:pumpjack_base"
+				type: "item"
+			}]
+			title: "I love pu-"
+			x: -10.5d
+			y: -7.0d
+		}
+		{
+			dependencies: ["630E111C421C7655"]
+			description: ["Craft a pumpjack hammer holder."]
+			disable_toast: true
+			id: "3A95EDF5E9406312"
+			rewards: [{
+				id: "3B85CAD689735DDC"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [
+				{
+					id: "0E925B2BD3BB0327"
+					item: "tfmg:pumpjack_hammer"
+					type: "item"
+				}
+				{
+					id: "4478A08C0A77F5FA"
+					item: "tfmg:pumpjack_hammer_part"
+					type: "item"
+				}
+				{
+					id: "30C7503142ED37CD"
+					item: "tfmg:pumpjack_hammer_head"
+					type: "item"
+				}
+				{
+					id: "54BB2BA60B1F344F"
+					item: "tfmg:pumpjack_hammer_connector"
+					type: "item"
+				}
+			]
+			title: "I love ham"
+			x: -10.5d
+			y: -11.5d
+		}
+		{
+			dependencies: ["5D8185C407A1CBB1"]
+			description: ["Craft a industrial pipe."]
+			disable_toast: true
+			id: "34973A9A743A96FA"
+			rewards: [{
+				id: "68AF921B5AD0A198"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "3999A1C3F9977FEB"
+				item: "tfmg:industrial_pipe"
+				type: "item"
+			}]
+			title: "The names can't all be winners"
+			x: -6.0d
+			y: -10.5d
+		}
+		{
+			dependencies: [
+				"3A95EDF5E9406312"
+				"642F1417332263A6"
+				"0C0AFCDFD7690396"
+				"200D67DCAC1E144F"
+			]
+			description: ["Pump your first bucket of crude oil."]
+			disable_toast: true
+			id: "2849E842B1E847DD"
+			rewards: [{
+				id: "570CFA41E6DF4B10"
+				type: "xp"
+				xp: 50
+			}]
+			size: 2.0d
+			tasks: [{
+				id: "327041AEC1728BE2"
+				item: "tfmg:crude_oil_bucket"
+				type: "item"
+			}]
+			title: "Young man stop your crude language"
+			x: -14.0d
+			y: -9.0d
+		}
+		{
+			dependencies: ["2849E842B1E847DD"]
+			description: ["Craft a steel distillation controller."]
+			disable_toast: true
+			id: "08997D6582B555C8"
+			tasks: [{
+				id: "555F278510ADA8F6"
+				item: "tfmg:steel_distillation_controller"
+				type: "item"
+			}]
+			title: "Controls the steeling like the cops"
+			x: -16.0d
+			y: -8.5d
+		}
+		{
+			dependencies: ["2849E842B1E847DD"]
+			id: "4727718FFD289B68"
+			tasks: [{
+				id: "5E3E0F1667CE8F48"
+				item: "tfmg:steel_distillation_output"
+				type: "item"
+			}]
+			x: -16.0d
+			y: -9.5d
+		}
+		{
+			dependencies: ["42F415BDA5835D3A"]
+			description: ["Craft a steel fluid tank."]
+			disable_toast: true
+			id: "11E635E6C7BF2929"
+			tasks: [{
+				id: "765BA3565C432A05"
+				item: "tfmg:steel_fluid_tank"
+				type: "item"
+			}]
+			title: "Like the the regular tank but forces you to give it liquid"
+			x: -2.5d
+			y: -1.0d
+		}
+		{
+			dependencies: [
+				"08997D6582B555C8"
+				"4727718FFD289B68"
+				"3E97EC2A85FA9293"
+			]
+			description: ["Refine crude oil (hint ponder steel distillation controller.) Use jei on gasoline for other oil product recipes."]
+			disable_toast: true
+			id: "13EB9E0673F523C3"
+			rewards: [{
+				id: "3F367F68895636F8"
+				type: "xp"
+				xp: 100
+			}]
+			size: 3.0d
+			tasks: [
+				{
+					id: "6D1D5393D8C13EFB"
+					item: "tfmg:gasoline_bucket"
+					type: "item"
+				}
+				{
+					id: "31B6F9F998ED0C51"
+					item: "tfmg:diesel_bucket"
+					type: "item"
+				}
+			]
+			title: "Congrats"
+			x: -12.0d
+			y: -4.5d
+		}
+		{
+			dependencies: [
+				"4FD8F77853D8C4A9"
+				"5D534820CFB1745B"
+			]
+			description: ["Craft a compact engine."]
+			disable_toast: true
+			id: "50F9AFAF73A43F24"
+			rewards: [{
+				id: "7DB6D87E4723A081"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "2E0AE2F7C8A771FB"
+				item: "tfmg:compact_engine"
+				type: "item"
+			}]
+			title: "Unlike your-"
+			x: -12.0d
+			y: 0.0d
+		}
+		{
+			dependencies: ["13EB9E0673F523C3"]
+			description: ["Craft a engine base."]
+			disable_toast: true
+			id: "4FD8F77853D8C4A9"
+			rewards: [{
+				id: "6E8395DBD31E1FF3"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "0D0F61188C8302D1"
+				item: "tfmg:engine_base"
+				type: "item"
+			}]
+			title: "As opposed to engine acid?"
+			x: -13.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["13EB9E0673F523C3"]
+			description: ["Distill heavy oil into lubrication oil."]
+			disable_toast: true
+			id: "5D534820CFB1745B"
+			rewards: [{
+				id: "6B7A0435876656D7"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "3A4620C4328738D4"
+				item: "tfmg:lubrication_oil_bucket"
+				type: "item"
+			}]
+			title: "Ain't no party like a-"
+			x: -11.0d
+			y: -2.0d
+		}
+		{
+			dependencies: ["11E635E6C7BF2929"]
+			description: ["Craft a steel pump and a steel pipe"]
+			disable_toast: true
+			id: "3E97EC2A85FA9293"
+			rewards: [{
+				id: "3A19749E00211039"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [
+				{
+					id: "5EDB2AA6B0308C5A"
+					item: "tfmg:steel_mechanical_pump"
+					type: "item"
+				}
+				{
+					id: "669C75316335598E"
+					item: "tfmg:steel_pipe"
+					type: "item"
+				}
+			]
+			title: "Steels fluid"
+			x: -4.0d
+			y: -1.5d
+		}
+		{
+			dependencies: ["50F9AFAF73A43F24"]
+			description: ["Craft a exhaust."]
+			disable_toast: true
+			id: "31FECAC72E34F6CB"
+			rewards: [{
+				id: "5FEE48DBACED3CCC"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "112A3D5CE3F0F2E6"
+				item: "tfmg:exhaust"
+				type: "item"
+			}]
+			title: "Making these names are exhausting"
+			x: -13.0d
+			y: 2.0d
+		}
+		{
+			dependencies: ["50F9AFAF73A43F24"]
+			description: ["Those who know. Craft a air intake."]
+			disable_toast: true
+			id: "06F032E15CB3AB8A"
+			rewards: [{
+				id: "1AC28730B1ABEA01"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "101969335EEBE1A1"
+				item: "tfmg:air_intake"
+				type: "item"
+			}]
+			title: "Seek fluid intake"
+			x: -11.0d
+			y: 2.0d
+		}
+		{
+			dependencies: [
+				"31FECAC72E34F6CB"
+				"06F032E15CB3AB8A"
+			]
+			description: ["Make a diesel engine."]
+			disable_toast: true
+			hide_dependency_lines: false
+			id: "7B1A62409B04A91E"
+			rewards: [{
+				id: "077BB535D943663B"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "574B62139610FE0B"
+				item: "tfmg:diesel_engine"
+				type: "item"
+			}]
+			title: "Don't put gas in it"
+			x: -12.0d
+			y: 4.0d
+		}
+		{
+			dependencies: ["7B1A62409B04A91E"]
+			description: ["Mix coolant (use jei.)"]
+			disable_toast: true
+			id: "48386273A0394348"
+			rewards: [{
+				id: "424B69482984779D"
+				type: "xp"
+				xp: 20
+			}]
+			tasks: [{
+				id: "2C25E1AFBF0BC10F"
+				item: "tfmg:cooling_fluid_bucket"
+				type: "item"
+			}]
+			title: "All the cool kids have it"
+			x: -12.0d
+			y: 6.0d
+		}
+		{
+			dependencies: ["48386273A0394348"]
+			description: ["Craft a diesel engine expansion."]
+			disable_toast: true
+			id: "4F38B12E71E67DDA"
+			rewards: [{
+				id: "4C307825B4990A64"
+				type: "xp"
+				xp: 20
+			}]
+			size: 3.0d
+			tasks: [{
+				id: "7E7C1EE2DF003CFC"
+				item: "tfmg:diesel_engine_expansion"
+				type: "item"
+			}]
+			title: "Seinfeld expands"
+			x: -12.0d
+			y: 10.5d
+		}
+	]
+	title: "Industrial age"
+}
